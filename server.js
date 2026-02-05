@@ -35,20 +35,20 @@ const bcrypt = require("bcryptjs");
 const Pending = require("./model/pendingitineraray")
 const Booking = require("./model/Booking")
 const app = express();
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 const isDev = process.env.NODE_ENV !== 'production';
 console.log(`🚀 Running in ${isDev ? 'DEVELOPMENT' : 'PRODUCTION'} mode`);
 
-const FRONTEND_URL = "https://tour.rajasthantouring.in";
+const FRONTEND_URL = "http://localhost:5173";
 // Jahan se data aur images aa rahi hain (Node Backend)
 const BACKEND_URL = "https://apitour.rajasthantouring.in";
 
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://tour.rajasthantouring.in", " https://apitour.rajasthantouring.in"], // Your React/Vite port—replace if different (e.g., 3000)
+    origin: ["http://localhost:5173", " https://apitour.rajasthantouring.in"], // Your React/Vite port—replace if different (e.g., 3000)
     methods: ["GET", "POST"],
   },
 });
@@ -81,7 +81,7 @@ io.on("connect_error", (err) => {
 // CORS configuration
 app.use(
   cors({
-    origin: ["https://tour.rajasthantouring.in", "http://10.234.86.139:3000", "https://apitour.rajasthantouring.in"],
+    origin: ["http://localhost:5173", "http://10.234.86.139:3000", "https://apitour.rajasthantouring.in"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
