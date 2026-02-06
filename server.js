@@ -81,7 +81,7 @@ io.on("connect_error", (err) => {
 // CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://10.234.86.139:3000", "https://rj-admin-panel-backend.onrender.com"],
+    origin: ["http://localhost:5173", "http://10.234.86.139:3000", "https://rj-admin-panel-backend.onrender.com","https://tour.rajasthantouring.in"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
