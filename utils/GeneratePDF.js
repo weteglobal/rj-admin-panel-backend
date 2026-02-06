@@ -190,7 +190,7 @@ const generatePDFBuffer = async (data) => {
             if (data.driverLicenseImage) {
                 const linkX = leftCol + doc.getTextWidth(`Driver License: ${data.driverLicense || 'N/A'} `);
                 doc.text("[Download]", linkX, driverSectionY)
-                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download]"), 4, { url: `https://apitour.rajasthantouring.in/uploads/${data.driverLicenseImage}` })
+                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download]"), 4, { url: `https://rj-admin-panel-backend.onrender.com/uploads/${data.driverLicenseImage}` })
             }
             driverSectionY += 5;
 
@@ -198,7 +198,7 @@ const generatePDFBuffer = async (data) => {
             if (data.vehicleRcImage) {
                 const linkX = leftCol + doc.getTextWidth(`Vehicle Number: ${data.driverVehicleNumber || 'N/A'} `);
                 doc.text("[Download RC]", linkX, driverSectionY)
-                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download RC]"), 4, { url: `https://apitour.rajasthantouring.in/uploads/${data.vehicleRcImage}` })
+                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download RC]"), 4, { url: `https://rj-admin-panel-backend.onrender.com/uploads/${data.vehicleRcImage}` })
             }
             driverSectionY += 5;
 
@@ -206,7 +206,7 @@ const generatePDFBuffer = async (data) => {
             if (data.aadhaarImage) {
                 const linkX = leftCol + doc.getTextWidth(`Aadhaar Name: ${data.aadhaarName || 'N/A'} `);
                 doc.text("[Download Aadhaar]", linkX, driverSectionY)
-                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download Aadhaar]"), 4, { url: `https://apitour.rajasthantouring.in/uploads/${data.aadhaarImage}` })
+                doc.link(linkX, driverSectionY - 2, doc.getTextWidth("[Download Aadhaar]"), 4, { url: `https://rj-admin-panel-backend.onrender.com/uploads/${data.aadhaarImage}` })
             }
             driverSectionY += 5;
 

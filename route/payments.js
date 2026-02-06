@@ -14,7 +14,7 @@ const path = require("path")
 const TourSoftwareModel = require("../model/TourSoftwareModel")
 
 // Server and client base URLs
-const serverBase = process.env.SERVER_BASE_URL || "https://apitour.rajasthantouring.in"
+const serverBase = process.env.SERVER_BASE_URL || "https://rj-admin-panel-backend.onrender.com"
 const clientBase = process.env.CLIENT_BASE_URL || "https://tour.rajasthantouring.in"
 
 // IMPORTANT: To fix the rupee symbol (₹) rendering issue in PDFs, download Noto Sans fonts from Google Fonts:

@@ -12,7 +12,7 @@ const TourSoftwareModel = require("../model/TourSoftwareModel");
 const Counter = require("../model/Counter");
 const axios = require("axios");
 const pendingitineraray = require("../model/pendingitineraray");
-const serverBase = process.env.SERVER_BASE_URL || "https://apitour.rajasthantouring.in";
+const serverBase = process.env.SERVER_BASE_URL || "https://rj-admin-panel-backend.onrender.com";
 const clientBase = process.env.CLIENT_BASE_URL || "https://tour.rajasthantouring.in";
 const JWT_SECRET = process.env.JWT_SECRET;
 const storage = multer.diskStorage({
@@ -825,7 +825,7 @@ router.post("/", async (req, res) => {
         }
         // if (booking.clientDetails.email) {
 
-        //     const apiUrl = `https://apitour.rajasthantouring.in/api/pending/${booking._id}/send-email`;
+        //     const apiUrl = `https://rj-admin-panel-backend.onrender.com/api/pending/${booking._id}/send-email`;
         //     const response = await axios.post(apiUrl);
         // }
 

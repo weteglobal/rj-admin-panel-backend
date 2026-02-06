@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const serverBase = process.env.SERVER_BASE_URL || "https://apitour.rajasthantouring.in";
+const serverBase = process.env.SERVER_BASE_URL || "https://rj-admin-panel-backend.onrender.com";
 const clientBase = process.env.CLIENT_BASE_URL || "https://tour.rajasthantouring.in";
 
 

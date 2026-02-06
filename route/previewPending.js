@@ -11,7 +11,7 @@ const TourSoftwareModel = require("../model/TourSoftwareModel");
 const Counter = require("../model/Counter");
 const axios = require("axios");
 const pendingitineraray = require("../model/priviewPending");
-const serverBase = process.env.SERVER_BASE_URL || "https://apitour.rajasthantouring.in";
+const serverBase = process.env.SERVER_BASE_URL || "https://rj-admin-panel-backend.onrender.com";
 const clientBase = process.env.CLIENT_BASE_URL || "https://tour.rajasthantouring.in";
 
 const storage = multer.diskStorage({

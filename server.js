@@ -43,12 +43,12 @@ console.log(`🚀 Running in ${isDev ? 'DEVELOPMENT' : 'PRODUCTION'} mode`);
 
 const FRONTEND_URL = "http://localhost:5173";
 // Jahan se data aur images aa rahi hain (Node Backend)
-const BACKEND_URL = "https://apitour.rajasthantouring.in";
+const BACKEND_URL = "https://rj-admin-panel-backend.onrender.com";
 
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", " https://apitour.rajasthantouring.in","https://tour.rajasthantouring.in"], // Your React/Vite port—replace if different (e.g., 3000)
+    origin: ["http://localhost:5173", " https://rj-admin-panel-backend.onrender.com","https://tour.rajasthantouring.in"], // Your React/Vite port—replace if different (e.g., 3000)
     methods: ["GET", "POST"],
   },
 });
@@ -81,7 +81,7 @@ io.on("connect_error", (err) => {
 // CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://10.234.86.139:3000", "https://apitour.rajasthantouring.in"],
+    origin: ["http://localhost:5173", "http://10.234.86.139:3000", "https://rj-admin-panel-backend.onrender.com"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -523,14 +523,14 @@ createSuperAdmin();
 // 🔥 NEW: API endpoint to get booking data (for Vite dev server)
 async function fetchBookingData(bookingId) {
   try {
-    const bookingsRes = await axios.get(`https://apitour.rajasthantouring.in/api/bookings/${bookingId}`);
+    const bookingsRes = await axios.get(`https://rj-admin-panel-backend.onrender.com/api/bookings/${bookingId}`);
     if (bookingsRes.data) return { data: bookingsRes.data, type: 'bookings' };
   } catch (err) {
     if (err.response?.status !== 404) console.error('Bookings API error:', err);
   }
 
   try {
-    const pendingRes = await axios.get(`https://apitour.rajasthantouring.in/api/pending/${bookingId}`);
+    const pendingRes = await axios.get(`https://rj-admin-panel-backend.onrender.com/api/pending/${bookingId}`);
     if (pendingRes.data) return { data: pendingRes.data, type: 'pending' };
   } catch (err) {
     console.error('Pending API error:', err);
